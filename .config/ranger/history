@@ -1,0 +1,13 @@
+open_with 
+mkdir Mu
+search unix
+open_with
+
+rename HR
+rename M
+rename P
+rename Programs
+delete
+rename programs
+ope
+rename code
