@@ -33,4 +33,4 @@ setopt correctall
 alias reds='exec redshift -l 13.0000:122.0000'
 alias sor='source ~/.zshrc'
 alias vz='vim ~/.zshrc'
-alias hi=''
+alias tracked='git ls-tree -r master --name-only'
