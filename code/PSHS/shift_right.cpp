@@ -1,7 +1,6 @@
 //Alcantara, Carlos Miguel R.
 //8 - Sampa
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main(void){
@@ -30,8 +29,6 @@ int main(void){
     for(int prev = right - 1, nu = right + dis - 1; nu >= left ; prev--, nu--)
         a[nu] = a[prev];
 
-    std::fixed;
-    std::setprecision(3);
     cout << "\nAfter:\t";
     for(int i = 0; i< size; i++)
         cout << a[i] << "\t";
@@ -39,5 +36,3 @@ int main(void){
 
     return 0;
  }
-        
-    
