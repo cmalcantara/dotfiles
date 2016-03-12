@@ -54,9 +54,6 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
-#xmodmap
-xmodmap ~/.Xmodmap
-
 #urxvt
 urxvtd --quiet --opendisplay --fork
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
@@ -70,3 +67,6 @@ setxkbmap -option ctrl:nocaps
 #dpi increase
 xrandr --dpi 192
 exec i3
+
+#xmodmap
+xmodmap $HOME/.Xmodmap

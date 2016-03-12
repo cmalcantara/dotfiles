@@ -4,7 +4,6 @@ inoremap <S-Tab> <C-V><Tab>
 
 "Puts Line Nubering
 set number
-
 set autoindent
 
 "Tabs equivalent to 4 spaces and 4 spaces is indentation

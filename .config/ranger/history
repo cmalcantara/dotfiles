@@ -1,8 +1,5 @@
-open_with 
 mkdir Mu
 search unix
-open_with
-
 rename HR
 rename M
 rename P
@@ -14,4 +11,16 @@ rename ch 0-4.pdf
 rename ch 5-
 rename ch 5-8.pdf
 rename ch 9-11.pdf
+mkdir Books
+mkdir Programming
+mkdir Grammar
+mkdir History
+mkdir Math
+open_with 
+open_with w
+rename Music
+rename solarized
+
 delete
+open_with
+open_with h

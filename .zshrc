@@ -27,7 +27,7 @@ export SAVEHIST=$HISTSIZE
 #settings
 setopt autocd
 setopt hist_ignore_all_dups
-setopt correctall
+setopt correct
 
 #aliases
 alias reds='exec redshift -l 13.0000:122.0000'
@@ -37,4 +37,5 @@ alias tracked='git ls-tree -r master --name-only'
 alias xmod='xmodmap ~/.Xmodmap'
 alias bt='bluetoothctl'
 alias wifi='sudo wifi-menu'
-
+alias vim='nocorrect vim'
+alias prog='cd ~/code/LOL'
