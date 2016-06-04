@@ -1,6 +1,7 @@
-# Created by newuser for 5.2
+# Created by CMA for 5.2
 
 #vim stuff
+bindkey "^?" backward-delete-char
 bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode
 function zle-line-init zle-keymap-select {
@@ -29,13 +30,36 @@ setopt autocd
 setopt hist_ignore_all_dups
 setopt correct
 
+#for viewing md files in terminal
+rmd(){
+	pandoc $1 | lynx -stdin
+}
+
+
 #aliases
-alias reds='exec redshift -l 13.0000:122.0000'
-alias sor='source ~/.zshrc'
+ #quick edits
 alias vz='vim ~/.zshrc'
+alias v3='vim ~/.i3/config'
+alias vc='vim ~/.vimrc'
+alias td='vim ~/work/gtd.txt'
+alias sor='source ~/.zshrc'
+alias jour='vim ~/work/Journal.txt'
+alias ttr='vim ~/work/Things_To_Remember.txt'
+alias ref='vim ~/work/References.txt'
+alias sch='vim ~/work/Schedule.txt'
+
+
+ #fast shortcuts
+#alias reds='redshift -l 13.0000:122.0000'
+alias reds='redshift -b 1:1'
 alias tracked='git ls-tree -r master --name-only'
 alias xmod='xmodmap ~/.Xmodmap'
 alias bt='bluetoothctl'
 alias wifi='sudo wifi-menu'
 alias vim='nocorrect vim'
-alias prog='cd ~/code/LOL'
+alias pg='ping -c 3 google.com'
+alias def='/usr/bin/sdcv'
+alias w='cd ~/work/'
+alias j='cd ~/justdoit/'
+alias p='sudo pacman '
+alias r='ranger'

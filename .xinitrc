@@ -67,6 +67,4 @@ setxkbmap -option ctrl:nocaps
 #dpi increase
 xrandr --dpi 192
 exec i3
-
-#xmodmap
-xmodmap $HOME/.Xmodmap
+exec autocutsel

@@ -1,12 +1,11 @@
 #############################################################
 ##                     i3 config file                      ##
 #############################################################
-
 #############################################################
 ##                       variables                         ##
 #############################################################
 
-set $mod           Mod4
+set $mod           Mod1
 
 ############################################################
 ##                       Configs                          ##
@@ -19,6 +18,9 @@ bindcode $mod+36 exec i3-sensible-terminal
 bindcode $mod+40 exec dmenu_run
 bindsym  $mod+p exec firefox
 
+#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+#exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/spotify'
+
 #*Brightness Controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
@@ -27,9 +29,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86AudioRaiseVolume exec "pamixer -i 5"
 bindsym XF86AudioLowerVolume exec "pamixer -d 5"
 bindsym XF86AudioMute exec "pamixer -t"
+bindsym XF86AudioPlay exec "playerctl play-pause"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPrev exec "playerctl previous"
 
 #*Wallpaper
-exec --no-startup-id feh --bg-fill ~/Dropbox/Random\ Pics/W_2013_066.jpg
+exec --no-startup-id feh --bg-fill ~/Desktop/CL.jpeg
 
 #*Remove Title Bar
 new_window pixel 1
@@ -45,7 +50,7 @@ bar {
         status_command i3status
         mode hide
         position   top
-        modifier Mod1
+        modifier  Mod4
         tray_output primary
         font pango: DejaVu Sans Mono Bold 8
 

@@ -1,26 +1,50 @@
-mkdir Mu
-search unix
-rename HR
-rename M
-rename P
-rename Programs
-rename programs
-ope
-rename code
-rename ch 0-4.pdf
-rename ch 5-
-rename ch 5-8.pdf
-rename ch 9-11.pdf
-mkdir Books
-mkdir Programming
-mkdir Grammar
-mkdir History
-mkdir Math
+sudo mkdir stardict
+vim whatINeedToDo.txt
+vim
+e
+rename arch
+touch
+touch whatINeedToDo.txt
+touch 
+gcc -o lol re.c
+mkdir
+mkdir Chapter_1
+rename Sherlock.mobi
+find
+search grep
 open_with 
-open_with w
-rename Music
-rename solarized
-
+open_with g
+search btsync
+sudo rm btsync
+ 
+rename Clone-HOWTO.pdf
+search inser
+search pr
+search in
+search b
+search re
+search sch
+searchdow
+search ex
+se
+search jou
+rename Journa.txt
+search j
+search tim
+rename README.md
+search w
+search wo
+search boo
+search books
+search wor
+rename c-interfaces-and-implementations-techniques-for-creating-reusable-software.pdf
+search dow
+rename Igiveuponyou
+rename IGiveUpOnYou_K&R
+search 
+rename code
+sear
+mkdir Finally
+rename finally
 delete
-open_with
-open_with h
+

@@ -1,11 +1,11 @@
-##################################
-#	Basic Requirements:      #
-#				 #
-#	Internet Connection      #
-#	Bootable Arch Drive      #
-#	    Computer             #
-#				 #
-##################################
+##############################
+#	Basic Requirements:  #
+#			     #
+#	Internet Connection  #
+#	Bootable Arch Drive  #
+#	    Computer         #
+#			     #
+##############################
 
 ****************************************************************************************************
    Basic Installation Steps/Checklist:
@@ -27,18 +27,22 @@
 
    After Installation Steps/Checklist for Macbook:
 
-	1. Install Install Yaourt
+	1. Install Install Yaourt {
+        [archlinuxfr]
+         SigLevel = Never
+         Server = http://repo.archlinux.fr/$arch
+        } pacman -Syy yaourt
 	2. Install Wifi-Drivers from Yaourt (broadcom-wl) 
 	3. Install Trackpad-Drivers from Yaourt (xf86-input-mtrack-git)
 	4. Install Bluetooth-Drivers (bluez, bluez-utils)
 
    GUI Complete Install:
 
-	1. Install Vim and Emacs
-	2. Install xorg-server, xorg-utils, xorg-init
-	3. Install KDE and extra packages
-	4. Install Chromium
-	5. Install Terminator 
+	1. sudo pacman -S vim
+	2. sudo pacman -S xorg-server xorg-utils xorg-init
+    3. sudo pacman -S uncode-urxvt firefox i3 redshift w3m zathura feh smplayer mplayer spotify ttf-dejavu ttf-inconsolata
+    4. sudo pacman -S pulseaudio pamixer alsa-utils pamixer
+
 
 ****************************************************************************************************
 
