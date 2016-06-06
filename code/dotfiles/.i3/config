@@ -1,0 +1,141 @@
+#############################################################
+##                     i3 config file                      ##
+#############################################################
+#############################################################
+##                       variables                         ##
+#############################################################
+
+set $mod           Mod1
+
+############################################################
+##                       Configs                          ##
+############################################################
+
+font pango:DejaVu Sans Mono 9
+
+# start applications
+bindcode $mod+36 exec i3-sensible-terminal
+bindcode $mod+40 exec dmenu_run
+bindsym  $mod+p exec firefox
+
+#exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
+#exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/spotify'
+
+#*Brightness Controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+#*Sound Controls
+bindsym XF86AudioRaiseVolume exec "pamixer -i 5"
+bindsym XF86AudioLowerVolume exec "pamixer -d 5"
+bindsym XF86AudioMute exec "pamixer -t"
+bindsym XF86AudioPlay exec "playerctl play-pause"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPrev exec "playerctl previous"
+
+#*Wallpaper
+exec --no-startup-id feh --bg-fill ~/Desktop/CL.jpeg
+
+#*Remove Title Bar
+new_window pixel 1
+
+bindcode $mod+Shift+54 reload
+bindcode $mod+Shift+27 restart
+bindsym $mod+Shift+e exit
+
+################################################################
+##                          bar                               ##
+################################################################
+bar {
+        status_command i3status
+        mode hide
+        position   top
+        modifier  Mod4
+        tray_output primary
+        font pango: DejaVu Sans Mono Bold 8
+
+}
+
+########################################################################
+##                         Window Management                          ##
+########################################################################
+# split in horizontal and vertical orientation (changed because of vim defaults)
+bindsym $mod+o split h
+bindsym $mod+v split v
+
+# kill focused window
+bindcode $mod+Shift+24 kill
+
+# change focus (changed to vim default)
+bindcode $mod+43 focus left
+bindcode $mod+44 focus down
+bindcode $mod+45 focus up
+bindcode $mod+46 focus right
+
+# move focused window (changed to vim default)
+#bindcode $mod+Shift+43 move left
+bindcode $mod+Shift+44 move down
+bindcode $mod+Shift+45 move up
+bindcode $mod+Shift+46 move right
+
+# enter fullscreen mode for the focused container
+bindcode $mod+41 fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindcode $mod+39 layout stacking
+bindcode $mod+25 layout tabbed
+bindcode $mod+26 layout toggle split
+
+# toggle tiling / floating
+bindcode $mod+Shift+65 floating toggle
+
+# change focus between tiling / floating windows
+bindcode $mod+65 focus mode_toggle
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# focus the parent and child container
+bindcode $mod+38 focus parent
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindcode $mod+10 workspace 1
+bindcode $mod+11 workspace 2
+bindcode $mod+12 workspace 3
+bindcode $mod+13 workspace 4
+bindcode $mod+14 workspace 5
+bindcode $mod+15 workspace 6
+bindcode $mod+16 workspace 7
+bindcode $mod+17 workspace 8
+bindcode $mod+18 workspace 9
+bindcode $mod+19 workspace 10
+
+# move focused container to workspace
+bindcode $mod+Shift+10 move container to workspace 1
+bindcode $mod+Shift+11 move container to workspace 2
+bindcode $mod+Shift+12 move container to workspace 3
+bindcode $mod+Shift+13 move container to workspace 4
+bindcode $mod+Shift+14 move container to workspace 5
+bindcode $mod+Shift+15 move container to workspace 6
+bindcode $mod+Shift+16 move container to workspace 7
+bindcode $mod+Shift+17 move container to workspace 8
+bindcode $mod+Shift+18 move container to workspace 9
+bindcode $mod+Shift+19 move container to workspace 10
+
+mode "resize" {
+
+        #(Changed to vim default)
+        bindcode 46 resize shrink width 5 px or 5 ppt
+        bindcode 45 resize grow height 5 px or 5 ppt
+        bindcode 44 resize shrink height 5 px or 5 ppt
+        bindcode 43 resize grow width 5 px or 5 ppt
+
+        # back to normal: Enter or Escape
+        bindcode 36 mode "default"
+        bindcode 9 mode "default"
+}
+
+bindcode $mod+27 mode "resize"
+
+

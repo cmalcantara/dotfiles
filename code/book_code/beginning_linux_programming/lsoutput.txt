@@ -1,0 +1,14 @@
+total 40
+-rw-r--r-- 1 carlos users   85 Jun  5 10:00 bill.c
+-rw-r--r-- 1 carlos users 1504 Jun  5 10:00 bill.o
+-rw-r--r-- 1 carlos users   86 Jun  5 10:00 fred.c
+-rw-r--r-- 1 carlos users 1504 Jun  5 10:00 fred.o
+-rw-r--r-- 1 carlos users 3218 Jun  5 10:07 libfoo.a
+-rw-r--r-- 1 carlos users  106 Jun  5 10:05 lib.h
+-rw-r--r-- 1 carlos users    0 Jun  5 11:18 lsoutput.txt
+-rwxr-xr-x 1 carlos users 7040 Jun  5 10:08 program
+-rw-r--r-- 1 carlos users   87 Jun  5 10:03 program.c
+-rw-r--r-- 1 carlos users 1536 Jun  5 10:04 program.o
+  PID TTY          TIME CMD
+12122 pts/3    00:00:00 zsh
+12515 pts/3    00:00:00 ps

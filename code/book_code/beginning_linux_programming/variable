@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+yolo=wtf
+
+echo $yolo
+echo "$yolo"
+echo '$yolo'
+echo \$yolo
+
+echo "Enter a word"
+read yolo
+echo '$yolo' is now equal to $yolo
+
+exit 0
