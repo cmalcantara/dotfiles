@@ -1,6 +1,9 @@
 # Created by CMA for 5.2
 
 #vim stuff
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 bindkey "^?" backward-delete-char
 bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode
@@ -38,20 +41,22 @@ rmd(){
 
 #aliases
  #quick edits
-alias vz='vim ~/.zshrc'
-alias v3='vim ~/.i3/config'
-alias vc='vim ~/.vimrc'
-alias td='vim ~/work/gtd.txt'
+alias vz='nvim ~/.zshrc'
+alias v3='nvim ~/.i3/config'
+alias vx='nvim ~/.Xresources'
+alias vc='nvim ~/.config/nvim/init.vim'
+alias td='nvim ~/work/gtd.txt'
 alias sor='source ~/.zshrc'
-alias jour='vim ~/work/Journal.txt'
-alias ttr='vim ~/work/Things_To_Remember.txt'
-alias ref='vim ~/work/References.txt'
-alias sch='vim ~/work/Schedule.txt'
+alias jour='nvim ~/work/Journal.txt'
+alias ttr='nvim ~/work/Things_To_Remember.txt'
+alias ref='nvim ~/work/References.txt'
+alias sch='nvim ~/work/Schedule.txt'
 
 
  #fast shortcuts
 #alias reds='redshift -l 13.0000:122.0000'
-alias reds='redshift -b 1:1'
+alias vim='nvim'
+alias reds='redshift -b 0.8:0.8'
 alias tracked='git ls-tree -r master --name-only'
 alias xmod='xmodmap ~/.Xmodmap'
 alias bt='bluetoothctl'

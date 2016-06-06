@@ -1,62 +1,57 @@
-"Keymaps
-imap jk <Esc>
-inoremap <S-Tab> <C-V><Tab>
-
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-
-let mapleader=" "
-map <leader>k :E<cr>
-
-"going down virtual lines
-nnoremap k gk
+imap jk <Esc>			" Map jk to ESC
+nnoremap k gk			" Map j and k to gj and gk
 nnoremap j gj
 nnoremap gk k
 nnoremap gj k
+"inoremap <S-Tab> <C-V><Tab> 	" Map SHIFT + TAB to literal TAB
 
-"Puts Line Nubering
-set number
-set relativenumber
-set autoindent
+cnoremap <C-p> <Up>		" Map CTRL + P to UP in command mode
+cnoremap <C-n> <Down>		" Map CTRL + N to DOWN in command mode
 
+let mapleader=" "		" Map the leader key to SPACE
 
-"Tabs equivalent to 8 spaces and 8 spaces is indentation
-set tabstop=8
-set shiftwidth=8
-"set expandtab
-"set textwidth=90
+tnoremap <Esc> <C-\><C-n>  	" Map Esc to escape terminal mode in neovim
 
-"Turn on Sytax Highlighting
-syntax enable
-set background=dark
-colorscheme apprentice
+nnoremap <leader>r :call NumberToggle()<cr>
 
-"Confirms Unsaved Changes
-set confirm
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set showmode			" Show current mode.
+set ruler			" Show the line and column numbers of the ruler
+set number			" Show the line numbers on the left
+set relativenumber		" Moves the line numbers depending on cursor
+set shiftwidth=8		" Indentation amount for < and >
+set tabstop=8			" Render TABs using this many spaces
+set ignorecase			" Ignores cases in search
+"set expandtab			" Insert spaces when TAB is pressed
+"set textwidth=90		" Hard-wrap long lines 
+"set hlsearch			" Highlights search; auto in nvim
+"set history=10000		" Sets command-mode history; auto in nvim
+"set wildmenu=full		" Improves command-mode completion
+"set syntax			" Turns on syntax highlighting; auto in nvim
 
-"Search"
- "highlight
- set hls
+if maparg('<C-L>', 'n') ==# ''	" Use <C-L> to clear the highlighting of search
+	nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
 
- "no search"
- set ignorecase
+set background=dark		" Uses dark background of colorscheme
+colorscheme apprentice		" Sets colorscheme
+set confirm			" Confirms Unsaved Changes
+"set encoding=utf-8		" Sets encoding to UTF-8; auto in nvim
+set nrformats=			" Treat all numbers as decimal
 
-"Uses UTF-8"
-set encoding=utf-8
+" More natural splits
+set splitbelow			" Horizontal split below current.
+set splitright			" Vertical split to right of current.
 
-"Treat all numbers as decimal
-set nrformats=
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Relative numbering
+"Function! NumberToggle()
+"	if (&relativenumber == 1)
+"		set nornu
+"		set number
+"	else
+"		set relativenumber
+"	endif
+"Endfunc
 
-"essential.vim
-set nocompatible
-filetype plugin on
-
-"copy pasting
-set clipboard=unnamed
-
-"bash autocomplete
-set wildmode=full
-
-"Increase history
-set history=200
 
