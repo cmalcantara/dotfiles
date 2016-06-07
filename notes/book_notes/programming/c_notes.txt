@@ -1,0 +1,49 @@
+General
+	A C program is always made up of functions and variables
+    	functions contain the statments that spectify the computing operations to be done.
+        statements of a function are contained in braces({})
+    	variables store the values during the operations.
+        all variables must be declared before they are used
+
+Terminology
+	Perameters are the required and the Arguments are the values that you put in them
+	A bunch of Characters enclosed in quotation marks("") are called character strings or string constant
+
+Properties
+	In C integer division is truncated which removes the fractional part and 5/9 would be 0
+	Text input or output, regardless of where it originiates or hwere it goes to, is dealt wiht as streams of characters.
+	A text stream is a sequence of characters divided into lines;
+	each line consists of zero or more characters followed by a newline character
+
+Special Syntax
+	'extern x' declaration is needed if a variable is using an external variable in other header files
+
+Common Errors
+	semicolon
+    	if statement 1 = sign
+    	variables not set to 0
+    	loop stopping before or after intended index
+    	a requirement of something is not yet declared before it
+
+Words of Advice
+	functions should really be short and sweet
+	number of local variables should not exceed 5-10 or you're doing something wrong
+	comments should tell what your code does, not how
+    
+######################################################################################
+
+Linux Coding Style
+	indentation is 8 
+	max column length is 80
+	if () {
+
+	} else{
+
+	}
+
+	int function
+	{
+
+	}
+
+
