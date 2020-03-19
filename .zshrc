@@ -49,9 +49,11 @@ alias vx='nvim ~/.Xresources'
 alias vc='nvim ~/.config/nvim/init.vim'
 alias sor='source ~/.zshrc'				# reload .zshrc
 
- #fast movement
-alias r='ranger'
-alias c='~/code/book_code/programming_in_c'
+#fast movement
+#cd into ranger last directory
+#https://superuser.com/questions/1043806/how-to-exit-the-ranger-file-explorer-back-to-command-prompt-but-keep-the-current
+alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+#alias c='~/code/book_code/programming_in_c'
 
  #fast shortcuts
 #alias reds='redshift -l 13.0000:122.0000'
@@ -65,8 +67,18 @@ alias p='sudo pacman '					# pacman shortcut
 #########################################################################################
 #Export stuff
 #For Node Version Manager
+#https://github.com/nvm-sh/nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 #For Bazel
+#https://docs.bazel.build/versions/master/install-ubuntu.html
 export PATH="$PATH:$HOME/bin"
+
+#Bazel Command Line Completion
+#https://docs.bazel.build/versions/master/completion.html#zsh
+#this way the completion script does not have to parse Bazel's options
+# repeatedly.  The directory in cache-path must be created manually.
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
