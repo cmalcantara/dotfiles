@@ -64,7 +64,7 @@ alias wifi='sudo wifi-menu'				# wifi
 alias pg='ping -c 3 google.com'				# fast ping checking
 alias p='sudo pacman '					# pacman shortcut
 
-alias dual='xrandr --fb 3840x4720 --output eDP-1 --mode 3840x2160 --pos 0x2560--primary --output HDMI-1 --scale 2.5x2.5  --mode 1280x1024 --rate 60 --pos 0x0'
+alias dual='xrandr --fb 7680x4720 --output eDP-1 --mode 3840x2160 --scale 0.9999x0.9999 --pos 0x2560--primary --output HDMI-1 --scale 2.5x2.5  --mode 1280x1024 --rate 60 --pos 0x0'
 
 #########################################################################################
 #Export stuff
