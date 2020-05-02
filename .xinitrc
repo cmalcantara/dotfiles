@@ -9,12 +9,6 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 if [ -f $sysresources ]; then
 
-
-
-
-
-
-
     xrdb -merge $sysresources
 
 fi
@@ -24,10 +18,6 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
 
 
 
@@ -55,16 +45,19 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 
 #urxvt
-urxvtd --quiet --opendisplay --fork
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+#urxvtd --quiet --opendisplay --fork
+#[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 #keyboard repeat rate
 xset r rate 200 45
 
+#increase mouse acceleration
+xinput --set-prop 20 328 1 
+
 #change caps to ctrl
-setxkbmap -option ctrl:nocaps
+#setxkbmap -option ctrl:nocaps
 
 #dpi increase
-xrandr --dpi 192
-exec i3
-exec autocutsel
+#xrandr --dpi 192
+#exec i3
+#exec autocutsel
