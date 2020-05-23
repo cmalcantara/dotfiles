@@ -20,12 +20,16 @@ function zle-line-init zle-keymap-select {
 # basic autocompletion
 # i forgot what these options are
 
-autoload -U compinit promptinit
-compinit
-promptinit
-
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+#kitty stuff
+autoload -Uz compinit
+autoload -U promptinit
+compinit
+promptinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
 
 #prompt options
 autoload -U colors && colors
@@ -64,6 +68,13 @@ alias wifi='sudo wifi-menu'				# wifi
 alias pg='ping -c 3 google.com'				# fast ping checking
 alias p='sudo pacman '					# pacman shortcut
 
+#gaming shortcuts
+alias factorio='./Downloads/factorio/bin/x64/factorio'
+
+#music shortcuts
+alias qf='mpg123 ~/Downloads/Drive/core/information/music/Quiet\ Flow\ -\ Trent\ Reznor\ And\ Atticus\ Ross\ The\ Soical\ Network\ Soundtrack\ Full\ Album.mp3' 
+alias prso='mpg123 ~/Downloads/Drive/core/information/music/Problem\ Solving\ -\ Journey\ OST\ -\ Complete\ Soundtrack.mp3'
+
 alias dual='xrandr --fb 3840x4720 --output eDP-1 --mode 3840x2160 --scale 0.9999x0.9999 --pos 0x2560--primary --output HDMI-1 --scale 2.5x2.5  --mode 1280x1024 --rate 60 --pos 0x0'
 
 alias fonts='sudo fc-cache -fv'
@@ -78,6 +89,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 #For Bazel
 #https://docs.bazel.build/versions/master/install-ubuntu.html
 export PATH="$PATH:$HOME/bin"
+
+#adding pip and python stuff
+export PATH="$PATH:$HOME/.local/bin"
 
 #Bazel Command Line Completion
 #https://docs.bazel.build/versions/master/completion.html#zsh
