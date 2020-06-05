@@ -78,6 +78,14 @@ alias prso='mpg123 ~/Downloads/Drive/core/information/music/Problem\ Solving\ -\
 alias dual='xrandr --fb 3840x4720 --output eDP-1 --mode 3840x2160 --scale 0.9999x0.9999 --pos 0x2560--primary --output HDMI-1 --scale 2.5x2.5  --mode 1280x1024 --rate 60 --pos 0x0'
 
 alias fonts='sudo fc-cache -fv'
+alias install='sudo apt install'
+alias remove='sudo apt remove --purge'
+
+for scary in 'sudo apt install firefox'
+do
+    alias $scary="echo If you really want to do that, type: `which $scary`"
+done
+
 
 #########################################################################################
 #Export stuff
