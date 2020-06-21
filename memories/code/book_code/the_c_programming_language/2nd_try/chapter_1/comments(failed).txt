@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+#define OUT 		0 
+#define KINDA_OUT 	1 	
+#define KINDA_IN 	2 	
+#define IN_LINE 	3 	
+#define IN_MULTI 	4 	
+
+int main()
+{
+	int state = OUT;
+	int c;
+	
+	while ((c = getchar()) != EOF) {
+		if (c == '/' && state == OUT)
+			state = KINDA_IN;
+		else if (c == '/' && state == KINDA_IN)
+			state = IN_LINE;
+		else if (c == '\n' && state == IN_LINE) 
+			state = OUT;
+
+
+		else if (c == '*' && state == KINDA_IN)
+			state = IN_MULTI;
+		else if (c != '/' && state == KINDA_IN){
+			state = OUT;
+			putchar('/');
+		}
+
+
+		else if (c == '*' && state == IN_MULTI)
+			state = KINDA_OUT;
+		else if (c != '/' && state == KINDA_OUT)
+			state = IN_MULTI;
+			
+		if (state == OUT)
+			putchar(c);
+		else if (c == '/' && state == KINDA_OUT)
+			state = OUT;
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+

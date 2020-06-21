@@ -1,0 +1,65 @@
+
+### Basics
+	libraries are collections of precomiled functions that have been written to be reusable
+		.a is for tradiitonal, static libraries also known as archives
+		.so is for shared libraries.
+
+	You can compile functions to make object files in gcc using the -c option to prevent it 
+	from making a full program because it won't work because of the lack of a main function
+	the -L option tells the compiler to look at the current directory for the libraries. -lfoo 
+	option tells the compiler to us a library called libfoo.a. 
+
+	Basically shared libraries are cooler than static ones
+
+	when the program is created it only uses the function that it needs from the header files 
+	and does not put all the functions in the final program
+
+### Shells
+	> A shell is a program that acts as an interface between you and the linux system allowing 
+	> you to enter commands that the system will execute.
+
+	File Descriptors :
+
+		* (0) is input.
+		* (1) is output.
+		* (2) is error.
+
+	Pipes and Redirection : 
+
+		* (<) redirect input.
+		* (>) redirect the output to the file.
+		* (2>) redirects the standard error output to a file.
+		* (>&) to combine the two outputs.
+		  * Ex.) kill -l 1234 > /dev/null 2>&1.
+		* (>>) appends to the file.
+		* (|) cool pipes.
+
+	Scripting : 
+
+		Variables
+			> by default all variables are considered strings even if assigned as integers
+
+			* (=)(no spacing) assigns value
+			* ("") surroung value if containing whitespace
+
+			* ("var") the value of the variable will replace it in execution
+			* ('var') the literal variable name will be used in execution
+			* (\$) removes $ special meaning
+
+			Environment Variables
+				* ($HOME) home directory of the current user
+				* ($PATH) a colon-separated list of directories to search for commands
+				* ($PS1) the command prompt
+				* ($PS2) the secondary command prompt
+				* ($IFS) the input field separator
+				* ($0) name of the shell script
+				* ($#) the number of perameters passed
+				* ($$) the process ID of the shell script
+
+		Conditions
+		Program Control
+		Lists
+		Functions
+		Built-In Commands
+		Results
+		Here Documents

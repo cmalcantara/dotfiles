@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #installs favorite applications
-sudo apt install kitty neovim zsh ranger anki chromium-browser autokey
+sudo apt install kitty neovim zsh ranger atool anki chromium-browser autokey audacity
+cecilia krita 
 
 #changes to zsh
 chsh -s /bin/zsh
