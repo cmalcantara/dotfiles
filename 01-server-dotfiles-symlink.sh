@@ -25,6 +25,8 @@ echo "🔗 Creating symlinks for config files..."
 # Symlink .zshrc and .tmux.conf
 ln -sf "$SCRIPT_DIR/.zshrc" "$USER_HOME/.zshrc"
 ln -sf "$SCRIPT_DIR/.tmux.conf" "$USER_HOME/.tmux.conf"
+echo "🔁 Installing tmux package manager"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Ensure .config directory exists
 mkdir -p "$USER_HOME/.config"
